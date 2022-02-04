@@ -1,0 +1,17 @@
+{
+  "name": "prisma-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.com:with-loves/prisma-demo.git",
+  "author": "jason.li <jasonli772016@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.14",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.9.1",
+    "prisma": "^3.9.1"
+  }
+}
