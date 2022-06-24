@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-RUN addgroup -S nodejs && adduser -S nodejs -G nodejs sudo
+RUN addgroup -S nodejs && adduser -S nodejs -G nodejs
 
 USER nodejs:nodejs
 
@@ -10,10 +10,12 @@ COPY ./package*.json ./
 
 RUN npm install
 
+COPY . .
+
 RUN npx prisma generate
 
-COPY . .
+RUN npx prisma migrate dev
 
 EXPOSE 8080
 
-CMD [ "node", "index.js" ]
+CMD ["node", "index.js"]
